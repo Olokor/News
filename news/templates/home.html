@@ -3,12 +3,9 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-    {% if user.is_authenticated %}
-        Hi {{user.username}} you are {{user.age}} old
-        <p><a href="{% url 'logout' %}">Log out</a></p>
-    {% else %}
-        <p>you are not loged in </p>
-        <a href="{% url 'login' %}">log In</a>
-        <a href="{% url 'signup' %}">Sign Up</a>
-    {% endif %}
+    <br>
+    <div class="jumbotron"></div>
+    <h1 class="display-4">Newspaper app</h1>
+    <p class="lead">A NewsPaper website built with django</p>
+    <p class="lead"><a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">view all Articles</a></p>
 {% endblock content %} 

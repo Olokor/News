@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-f8)njh=*f^2ewgh63zw34el(2508c%&-&8d)az=^d9b)l8rj5e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -41,9 +41,11 @@ INSTALLED_APPS = [
     'crispy_forms',
     # local apps
     'accounts',
-    'pages'
+    'pages',
+    'articles'
 ]
 
+TIME_ZONE = 'West Africa Time'
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
 MIDDLEWARE = [
